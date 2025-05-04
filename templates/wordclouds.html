@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Wordcloud Sentimen</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Wordcloud Komentar</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Beranda</a>
+            <a href="{{ url_for('upload') }}">Upload Komentar</a>
+            <a href="{{ url_for('visuals') }}">Visualisasi</a>
+            <a href="{{ url_for('wordclouds') }}">Wordcloud</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Wordcloud Komentar Positif</h2>
+            <img src="data:image/png;base64,{{ pos_img }}" alt="Wordcloud Positif">
+        </section>
+
+        <section>
+            <h2>Wordcloud Komentar Negatif</h2>
+            <img src="data:image/png;base64,{{ neg_img }}" alt="Wordcloud Negatif">
+        </section>
+
+        <section>
+            <h2>Wordcloud Komentar Netral</h2>
+            <img src="data:image/png;base64,{{ net_img }}" alt="Wordcloud Netral">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Analisis Sentimen Indonesia Gelap</p>
+    </footer>
+</body>
+</html>

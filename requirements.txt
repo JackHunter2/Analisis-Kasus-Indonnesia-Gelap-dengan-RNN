@@ -7,3 +7,4 @@ wordcloud
 plotly
 tensorflow
 Sastrawi
+scikit-learn
